@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function Quote(){
-
+export default function Quote(props:{
+  isDataVisible: boolean;
+}){
+  const isQuoteVisible = props.isDataVisible? false : true;
   const url = "https://api.quotable.io/quotes/random?tags=technology,famous-quotes";
   const[author, setAuthor] = useState<string>('');
   const[quote, setQuote] = useState<string>('');
@@ -23,7 +25,15 @@ export default function Quote(){
     getRandomQuote();
   }, []);
 
+
   return (
-    <>{author}: {quote}</>
+    <>
+      {isQuoteVisible ? 
+      (<div>{author}:{quote}</div>)
+      :
+      null
+      }
+    </>
+
   );
 }
