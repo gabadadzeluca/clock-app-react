@@ -6,6 +6,7 @@ export default function NumberData(props:{
   dayOfYear: number;
   isDataVisible: boolean;
 }){
+  
   const {timeZone, weekNum, dayOfWeek, dayOfYear, isDataVisible} = props;
   return (
     <>

@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import Quote from './components/quoteGenerator/Quote';
+import Time from './components/timeContainer/time/Time';
+import bgImgs from './utils/bgImgs';
 
 function App() {
+  const[isDataVisible, setIsDataVisible] = useState<boolean>(false);
+  const[bgImage, setBgImage] = useState<string>('');
+
+  const getBgImg = ()=>{
+    const isNight = new Date().getHours() >= 19 || new Date().getHours() < 7;
+    
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={'Container'}>
+        <Quote isDataVisible={isDataVisible}/>
+        <Time isDataVisible={isDataVisible} setIsDataVisible={setIsDataVisible}/>
+      </div>
     </div>
   );
 }

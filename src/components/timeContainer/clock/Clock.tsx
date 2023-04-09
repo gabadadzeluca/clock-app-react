@@ -1,6 +1,5 @@
 import sun from '../../../assets/desktop/icon-sun.svg';
 import moon from '../../../assets/desktop/icon-moon.svg';
-import { useState } from 'react';
 
 interface MessageData {
   message: string;
@@ -9,6 +8,8 @@ interface MessageData {
 
 export default function Clock(props:{
   time:string;
+  timeFormat: string;
+  timeZone:string;
 }){
 
   const selectMessage = ():MessageData =>{

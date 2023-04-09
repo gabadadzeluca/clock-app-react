@@ -1,10 +1,16 @@
+import dotenv from 'dotenv';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import NumberData from '../dataContainer/NumberData';
 import styles from './Time.module.css';
 import Clock from '../clock/Clock';
 
-export default function Time(props:any){
+dotenv.config();
+
+export default function Time(props:{
+  isDataVisible : boolean;
+  setIsDataVisible: (isDataVisible:boolean)=>void;
+}){
   const {isDataVisible, setIsDataVisible} = props;
   const[timeZone, setTimeZone] = useState<string>('');
   const apiKey = process.env.REACT_APP_API_KEY;
@@ -50,7 +56,6 @@ export default function Time(props:any){
     dayOfYear,
     isDataVisible
   }
-
   
   useEffect(() => {
     const timerID = setInterval(() => setTime(new Date()), 1000*60);
