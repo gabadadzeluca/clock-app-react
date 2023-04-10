@@ -14,9 +14,6 @@ export default function Time(props:{
   const timeUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=xml&by=zone&zone=${timeZone}`;
   const[time, setTime] = useState<Date>(new Date());
   const[timeFormat, setTimeFormat] = useState<string>('');
-  const[weekNum, setWeekNum] = useState<number>(0);
-  const[dayOfWeek, setDayOfWeek] = useState<number>(0);
-  const[dayOfYear, setDayOfYear] = useState<number>(0);
 
   const getTimezone = ():void  => {
     const currentTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -42,10 +39,10 @@ export default function Time(props:{
     const calculatedDayOfWeek = now.getDay();
     const oneDay = 1000 * 60 * 60 * 24;
     const calculatedDayOfYear = Math.floor(diff / oneDay);
-    setWeekNum(calculatedWeekNumber);
-    setDayOfWeek(calculatedDayOfWeek);
-    setDayOfYear(calculatedDayOfYear);
+    return {weekNum: calculatedWeekNumber, dayOfWeek: calculatedDayOfWeek, dayOfYear: calculatedDayOfYear}
   }
+
+  const {weekNum, dayOfWeek, dayOfYear} = getParams();
   const params = {
     timeZone, 
     weekNum, 
