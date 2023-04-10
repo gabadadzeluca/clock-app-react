@@ -1,0 +1,26 @@
+.button{
+  border: none;
+  border-radius: 2.8rem;
+  position: relative;
+  width: 11.5rem;
+  height: 3.9rem;
+  padding-right: 4rem;
+}
+
+.button::after{
+  content: '';
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: black;
+  position: fixed;
+  border-radius: 100%;
+  transform: translate(50%,-25%);
+  background-position: center;
+  background-size: 0.9rem;
+  background-image: url('../../../assets/desktop/icon-arrow-down.svg');
+}
+
+.button.clicked::after{
+  background-size: 2.4rem;
+  background-image: url('../../../assets/desktop/icon-arrow-up.svg');
+}

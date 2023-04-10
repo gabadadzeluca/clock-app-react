@@ -8,7 +8,7 @@ export default function Time(props:{
   isDataVisible : boolean;
   setIsDataVisible: (isDataVisible:boolean)=>void;
 }){
-  const {isDataVisible, setIsDataVisible} = props;
+  const{isDataVisible, setIsDataVisible} = props;
   const[timeZone, setTimeZone] = useState<string>('');
   const apiKey = process.env.REACT_APP_API_KEY;
   const timeUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=xml&by=zone&zone=${timeZone}`;
@@ -41,6 +41,9 @@ export default function Time(props:{
     const calculatedDayOfYear = Math.floor(diff / oneDay);
     return {weekNum: calculatedWeekNumber, dayOfWeek: calculatedDayOfWeek, dayOfYear: calculatedDayOfYear}
   }
+  const handleClick = ():void =>{
+    setIsDataVisible(!isDataVisible);
+  }
 
   const {weekNum, dayOfWeek, dayOfYear} = getParams();
   const params = {
@@ -72,7 +75,12 @@ export default function Time(props:{
     <div>
       <div>
         <Clock time={formattedTime} timeFormat={timeFormat} timeZone={timeZone}/>
-        <button onClick={()=>setIsDataVisible(!isDataVisible)}>MORE</button>
+        <button 
+          onClick={handleClick}
+          className={`${styles.button} ${isDataVisible ? styles.clicked : ''}`}
+          >
+          MORE
+          </button>
       </div>
       <NumberData {...params}/>
     </div>
