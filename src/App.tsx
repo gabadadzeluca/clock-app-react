@@ -8,8 +8,10 @@ function App() {
   const[isDataVisible, setIsDataVisible] = useState<boolean>(false);
   const[bgImage, setBgImage] = useState<string>('');
 
-  const getBgImg = ()=>{
+  const handleResizeAndThemeChange = ()=>{
     const isNight = new Date().getHours() >= 19 || new Date().getHours() < 7;
+    const mode = isNight ? 'darkMode' : '';
+    document.documentElement.className = mode;
     const imageSources = isNight ? bgImgs.night : bgImgs.day;
     const screenWidth = window.innerWidth;
     const newBgImage =
@@ -21,8 +23,9 @@ function App() {
     setBgImage(newBgImage);
   }
 
+  window.addEventListener('resize', handleResizeAndThemeChange);
   useEffect(()=>{
-    getBgImg();
+    handleResizeAndThemeChange();
   },[])
   
 
