@@ -1,11 +1,8 @@
-import dotenv from 'dotenv';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import NumberData from '../dataContainer/NumberData';
 import styles from './Time.module.css';
 import Clock from '../clock/Clock';
-
-dotenv.config();
 
 export default function Time(props:{
   isDataVisible : boolean;

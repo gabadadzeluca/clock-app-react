@@ -12,6 +12,7 @@ export default function Clock(props:{
   timeZone:string;
 }){
 
+  const {timeZone, timeFormat, time} = props; 
   const selectMessage = ():MessageData =>{
     let message:string = '';
     let icon: string;
@@ -30,11 +31,15 @@ export default function Clock(props:{
   }
 
   const {message, icon} = selectMessage();
-  
+  const city = timeZone.split('/')[1]?.toUpperCase();
   return (
     <div>
       <p style={{ backgroundImage: `url(${icon})` }}>{message}</p>
-      <h2>{props.time}</h2>
+      <div>
+        <h2>{time}</h2>
+        <span>{timeFormat}</span>
+      </div>
+      <p>IN {city}</p>
     </div>
-  )
+  );
 }
