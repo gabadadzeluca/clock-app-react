@@ -1,5 +1,6 @@
 import sun from '../../../assets/desktop/icon-sun.svg';
 import moon from '../../../assets/desktop/icon-moon.svg';
+import styles from './Clock.module.css';
 
 interface MessageData {
   message: string;
@@ -18,13 +19,13 @@ export default function Clock(props:{
     let icon: string;
     const hour = new Date().getHours();
     if (hour >= 5 && hour < 12) {
-      message = 'Good morning!';
+      message = 'Good morning';
       icon = sun;
     } else if (hour >= 12 && hour < 18) {
-      message = 'Good afternoon!';
+      message = 'Good afternoon';
       icon = moon;
     } else {
-      message = 'Good evening!';
+      message = 'Good evening';
       icon = moon;
     }
     return {message, icon};
@@ -33,13 +34,13 @@ export default function Clock(props:{
   const {message, icon} = selectMessage();
   const city = timeZone.split('/')[1]?.toUpperCase();
   return (
-    <div>
-      <p style={{ backgroundImage: `url(${icon})` }}>{message}</p>
-      <div>
+    <div className={styles.clockContainer}>
+      <p style={{ backgroundImage: `url(${icon})` }} className={styles.message}>{message}</p>
+      <div className={styles.timeDiv}>
         <h2>{time}</h2>
-        <span>{timeFormat}</span>
+        <p>{timeFormat}</p>
       </div>
-      <p>IN {city}</p>
+      <h3 className={styles.location}>IN {city}</h3>
     </div>
   );
 }

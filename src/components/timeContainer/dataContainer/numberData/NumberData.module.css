@@ -1,0 +1,8 @@
+.dataContainer{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 3rem;
+  padding:2rem 0 ;
+  background-color: var(--data-bg);
+}

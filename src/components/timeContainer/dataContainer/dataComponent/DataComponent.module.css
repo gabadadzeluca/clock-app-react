@@ -1,0 +1,15 @@
+.dataComponent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--data-text-color);
+  padding: 1rem 5%;
+}
+.dataComponent>p{
+  font-size: 1rem;
+  font-weight: var(--regular);
+}
+.dataComponent>h2{
+  font-size: 2rem;
+  font-weight: var(--bold);
+}

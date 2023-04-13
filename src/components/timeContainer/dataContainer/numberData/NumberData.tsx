@@ -1,4 +1,6 @@
-import DataComponent from "./DataComponent"
+import DataComponent from "../dataComponent/DataComponent";
+import styles from './NumberData.module.css';
+
 export default function NumberData(props:{
   timeZone:string; 
   weekNum: number;
@@ -12,7 +14,7 @@ export default function NumberData(props:{
     <>
     {isDataVisible ? 
       (
-      <div>
+      <div className={styles.dataContainer}> 
         <div>
           <DataComponent title="CURRENT TIMEZONE" param={timeZone}/>
           <DataComponent title="DAY OF THE YEAR" param={dayOfYear}/>
@@ -27,6 +29,5 @@ export default function NumberData(props:{
       null
     }
     </>
-
   )
 }

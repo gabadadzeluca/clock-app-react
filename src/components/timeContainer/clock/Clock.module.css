@@ -1,0 +1,28 @@
+.clockContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 8rem;
+}
+
+.message{
+  background-size: contain;
+  background-position: left;
+  padding-left: 3rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+.timeDiv{
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.timeDiv>h2{
+  font-size: 10rem;
+}
+.timeDiv>p, .location{
+  font-size: 1.5rem;
+}
+.location{
+  letter-spacing: 0.2rem;
+}

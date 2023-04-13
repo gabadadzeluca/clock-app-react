@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import styles from './Quote.module.css';
 
 export default function Quote(props:{
   isDataVisible: boolean;
@@ -14,8 +15,8 @@ export default function Quote(props:{
       const response = await axios.get(url);
       const auth = response.data[0].author;
       const quote = response.data[0].content;
+      setQuote(`"${quote}"`);
       setAuthor(auth);
-      setQuote(quote);
     }catch(error){
       console.log(error);
     }
@@ -29,7 +30,12 @@ export default function Quote(props:{
   return (
     <>
       {isQuoteVisible ? 
-      (<div>{author}:{quote}</div>)
+      (
+        <div className={styles.quoteDiv}>
+          <p>{quote}</p>
+          <h4>{author}</h4>
+        </div>
+      )
       :
       null
       }

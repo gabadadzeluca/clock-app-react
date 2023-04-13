@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import NumberData from '../dataContainer/NumberData';
+import NumberData from '../dataContainer/numberData/NumberData';
 import styles from './Time.module.css';
 import Clock from '../clock/Clock';
 
@@ -44,7 +44,6 @@ export default function Time(props:{
   const handleClick = ():void =>{
     setIsDataVisible(!isDataVisible);
   }
-
   const {weekNum, dayOfWeek, dayOfYear} = getParams();
   const params = {
     timeZone, 
@@ -55,32 +54,29 @@ export default function Time(props:{
   }
   
   useEffect(() => {
-    const timerID = setInterval(() => setTime(new Date()), 1000*60);
+    const timerID = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timerID);
   }, []);
 
   useEffect(() => {
     getTimezone();
-    getParams();
     if (timeZone) {
       getTimeFormat();
     }
   }, [timeZone]);
 
-
-
   const formattedTime = time.toLocaleString([], {'hour12': false,'hour':'numeric', 'minute':'numeric'});
   
   return (
-    <div>
-      <div>
+    <div className={styles.timeContainer}>
+      <div className={styles.timeDiv}>
         <Clock time={formattedTime} timeFormat={timeFormat} timeZone={timeZone}/>
         <button 
           onClick={handleClick}
           className={`${styles.button} ${isDataVisible ? styles.clicked : ''}`}
-          >
+        >
           MORE
-          </button>
+        </button>
       </div>
       <NumberData {...params}/>
     </div>
