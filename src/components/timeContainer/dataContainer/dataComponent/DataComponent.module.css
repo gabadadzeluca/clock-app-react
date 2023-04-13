@@ -13,3 +13,19 @@
   font-size: 2rem;
   font-weight: var(--bold);
 }
+
+@media screen and (min-width: 800px) {
+  .dataComponent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 50%;
+  }
+  .dataComponent>p{
+    font-size: 1.3rem;
+  }
+  .dataComponent>h2{
+    font-size: 4rem;
+  }
+}

@@ -3,6 +3,20 @@
   width: 100%;
   flex-direction: column;
   margin-top: 3rem;
-  padding:2rem 0 ;
+  padding:2rem 0;
   background-color: var(--data-bg);
+}
+
+
+@media screen and (min-width: 800px) {
+  .dataContainer{
+    min-height: 45%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .dataContainer>*{
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
 }
