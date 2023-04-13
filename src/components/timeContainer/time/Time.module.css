@@ -18,7 +18,7 @@
   width: 3.2rem;
   height: 3.2rem;
   background-color: #303030;
-  position: fixed;
+  position: absolute;
   border-radius: 100%;
   transform: translate(30%,-25%);
   background-position: center;
@@ -42,4 +42,21 @@
 
 .timeDiv{
   width: 80%;
+}
+
+@media screen and (min-width: 800px) {
+  .button{
+    width: 14.6rem;
+    height: 5.6rem;
+    font-size: 1.8rem;
+  }
+  .button::after{
+    width: 4rem;
+    height: 4rem;
+    transform: translate(20%,-20%);
+    background-size: 1.3rem;
+  }
+  .button.clicked::after{
+    background-size: 4rem;
+  }
 }

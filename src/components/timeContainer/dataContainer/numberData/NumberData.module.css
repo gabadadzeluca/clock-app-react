@@ -8,11 +8,12 @@
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .dataContainer{
     min-height: 45%;
     flex-direction: row;
     justify-content: space-around;
+    padding-bottom: 3rem;
   }
   .dataContainer>*{
     min-width: 30%;

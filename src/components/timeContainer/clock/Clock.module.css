@@ -26,3 +26,18 @@
 .location{
   letter-spacing: 0.2rem;
 }
+
+@media screen and (min-width: 700px) {
+  .clockContainer{
+    margin-top: 3rem;
+  }
+  .timeDiv>h2{
+    font-size: 17.5rem;
+  }
+  .timeDiv>p{
+    font-size: 3.2rem;
+  }
+  .location{
+    font-size: 1.8rem;
+  }
+}
