@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/clock-app-react/static/css/main.b771d208.css",
-    "main.js": "/clock-app-react/static/js/main.1785bcf9.js",
+    "main.js": "/clock-app-react/static/js/main.c978d306.js",
     "static/media/bg-image-nighttime.jpg": "/clock-app-react/static/media/bg-image-nighttime.a9c730ff6f3e4a40519b.jpg",
     "static/media/bg-image-daytime.jpg": "/clock-app-react/static/media/bg-image-daytime.13c049fcfdc590ddcef0.jpg",
     "static/media/icon-sun.svg": "/clock-app-react/static/media/icon-sun.cb7a2aac3be7bf88b4cf17bd97d62fd2.svg",
@@ -10,10 +10,10 @@
     "static/media/icon-arrow-up.svg": "/clock-app-react/static/media/icon-arrow-up.fc4dd3798926800afb53.svg",
     "static/media/icon-arrow-down.svg": "/clock-app-react/static/media/icon-arrow-down.4d330a30a2190ce71512.svg",
     "main.b771d208.css.map": "/clock-app-react/static/css/main.b771d208.css.map",
-    "main.1785bcf9.js.map": "/clock-app-react/static/js/main.1785bcf9.js.map"
+    "main.c978d306.js.map": "/clock-app-react/static/js/main.c978d306.js.map"
   },
   "entrypoints": [
     "static/css/main.b771d208.css",
-    "static/js/main.1785bcf9.js"
+    "static/js/main.c978d306.js"
   ]
 }
