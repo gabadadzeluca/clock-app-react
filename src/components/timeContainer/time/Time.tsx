@@ -11,7 +11,7 @@ export default function Time(props:{
   const{isDataVisible, setIsDataVisible} = props;
   const[timeZone, setTimeZone] = useState<string>('');
   const apiKey = process.env.REACT_APP_API_KEY;
-  const timeUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=xml&by=zone&zone=${timeZone}`;
+  const timeUrl = `https://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=xml&by=zone&zone=${timeZone}`;
   const[time, setTime] = useState<Date>(new Date());
   const[timeFormat, setTimeFormat] = useState<string>('');
 
