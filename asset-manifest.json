@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/%7Bclock-app-react%7D/static/css/main.a0d4f02c.css",
+    "main.js": "/%7Bclock-app-react%7D/static/js/main.878530eb.js",
+    "static/js/787.efa701b3.chunk.js": "/%7Bclock-app-react%7D/static/js/787.efa701b3.chunk.js",
+    "static/media/bg-image-nighttime.jpg": "/%7Bclock-app-react%7D/static/media/bg-image-nighttime.a9c730ff6f3e4a40519b.jpg",
+    "static/media/bg-image-daytime.jpg": "/%7Bclock-app-react%7D/static/media/bg-image-daytime.13c049fcfdc590ddcef0.jpg",
+    "static/media/icon-sun.svg": "/%7Bclock-app-react%7D/static/media/icon-sun.cb7a2aac3be7bf88b4cf17bd97d62fd2.svg",
+    "index.html": "/%7Bclock-app-react%7D/index.html",
+    "static/media/icon-moon.svg": "/%7Bclock-app-react%7D/static/media/icon-moon.83b9f0dbe53bfaab2e1c6dc344545e9c.svg",
+    "static/media/icon-arrow-up.svg": "/%7Bclock-app-react%7D/static/media/icon-arrow-up.fc4dd3798926800afb53.svg",
+    "static/media/icon-arrow-down.svg": "/%7Bclock-app-react%7D/static/media/icon-arrow-down.4d330a30a2190ce71512.svg",
+    "main.a0d4f02c.css.map": "/%7Bclock-app-react%7D/static/css/main.a0d4f02c.css.map",
+    "main.878530eb.js.map": "/%7Bclock-app-react%7D/static/js/main.878530eb.js.map",
+    "787.efa701b3.chunk.js.map": "/%7Bclock-app-react%7D/static/js/787.efa701b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0d4f02c.css",
+    "static/js/main.878530eb.js"
+  ]
+}
