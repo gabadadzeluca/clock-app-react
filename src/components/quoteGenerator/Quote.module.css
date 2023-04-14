@@ -26,3 +26,11 @@
     font-size: 1.8rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  .quoteDiv>p, .quoteDiv{
+    font-size: 1.8rem;
+  }
+  .quoteDiv>p{
+    max-width: 50%;
+  }
+}
