@@ -15,11 +15,11 @@ export default function NumberData(props:{
     {isDataVisible ? 
       (
       <div className={styles.dataContainer}> 
-        <div>
+        <div className={styles.leftDiv}>
           <DataComponent title="CURRENT TIMEZONE" param={timeZone}/>
           <DataComponent title="DAY OF THE YEAR" param={dayOfYear}/>
         </div>
-        <div>
+        <div className={styles.rightDiv}>
           <DataComponent title="DAY OF THE WEEK" param={dayOfWeek}/>
           <DataComponent title="WEEK NUMBER" param={weekNum}/>
         </div>

@@ -20,7 +20,7 @@
 .timeDiv>h2{
   font-size: 10rem;
 }
-.timeDiv>p, .location{
+.timeDiv>p, .location, .message{
   font-size: 1.5rem;
 }
 .location{
@@ -37,7 +37,21 @@
   .timeDiv>p{
     font-size: 3.2rem;
   }
-  .location{
+  .location, .message{
     font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .timeDiv>h2{
+    font-size: 20rem;
+  }
+  .timeDiv>p{
+    font-size: 4rem;
+  }
+  .location{
+    font-size: 2.4rem;
+  }
+  .message{
+    font-size: 2rem;
   }
 }

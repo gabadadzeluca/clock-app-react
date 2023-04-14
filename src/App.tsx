@@ -23,9 +23,12 @@ function App() {
     setBgImage(newBgImage);
   }
 
-  window.addEventListener('resize', handleResizeAndThemeChange);
   useEffect(()=>{
     handleResizeAndThemeChange();
+    window.addEventListener('resize', handleResizeAndThemeChange);
+    return () => {
+      window.removeEventListener('resize', handleResizeAndThemeChange);
+    };
   },[])
   
 

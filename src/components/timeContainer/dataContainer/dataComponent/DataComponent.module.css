@@ -29,3 +29,11 @@
     font-size: 4rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  .dataComponent>p{
+    font-size: 1.5rem;
+  }
+  .dataComponent>h2{
+    font-size: 5.6rem;
+  }
+}

@@ -5,19 +5,29 @@
   margin-top: 3rem;
   padding:2rem 0;
   background-color: var(--data-bg);
+  opacity: .9;
 }
-
 
 @media screen and (min-width: 700px) {
   .dataContainer{
     min-height: 45%;
     flex-direction: row;
     justify-content: space-around;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
   }
   .dataContainer>*{
     min-width: 30%;
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .dataContainer>*{
+    width: 50%;
+    padding: 0 8%;
+  }
+  .leftDiv{
+    border-right: 0.1rem solid var(--data-text-color);
   }
 }

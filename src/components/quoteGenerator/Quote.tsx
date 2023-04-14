@@ -37,7 +37,7 @@ export default function Quote(props:{
         </div>
       )
       :
-      null
+        null
       }
     </>
 

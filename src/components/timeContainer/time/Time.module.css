@@ -60,3 +60,17 @@
     background-size: 4rem;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .timeDiv{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .button{
+    margin: 0;
+  }
+}

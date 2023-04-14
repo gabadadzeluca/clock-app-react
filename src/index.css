@@ -1,8 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+
+/* light mode */
+:root{
+  --data-text-color: #303030;
+  --text-color: #FFFFFF;
+  --data-bg: #FFFFFF;
+  --regular: 400;
+  --bold: 700;
+}
+
+:root.darkMode{
+  --data-text-color: #FFFFFF;
+  --data-bg: #000000BF;
+}
+
+
 *, *::after, *::before{
   margin: 0;
   box-sizing: border-box;
+  background-repeat: no-repeat;
 }
 
 html{
@@ -11,4 +28,10 @@ html{
 
 body{
   font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  font-weight: var(--regular);
+}
+
+p{
+  font-size: 1.5rem;
 }

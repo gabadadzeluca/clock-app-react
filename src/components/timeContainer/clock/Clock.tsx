@@ -30,9 +30,14 @@ export default function Clock(props:{
     }
     return {message, icon};
   }
-
-  const {message, icon} = selectMessage();
+  let {message, icon} = selectMessage();
   const city = timeZone.split('/')[1]?.toUpperCase();
+
+  // add string to the message depending on the screen size
+  if(window.innerWidth > 699){
+    message = message + ", It's currently";
+  }
+
   return (
     <div className={styles.clockContainer}>
       <p style={{ backgroundImage: `url(${icon})` }} className={styles.message}>{message}</p>

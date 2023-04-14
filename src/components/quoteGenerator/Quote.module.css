@@ -19,6 +19,7 @@
 
 @media screen and (min-width: 700px) {
   .quoteDiv{
+    padding-top: 3rem;
     width: 80%;
   }
   .quoteDiv>p, .quoteDiv>h4{
